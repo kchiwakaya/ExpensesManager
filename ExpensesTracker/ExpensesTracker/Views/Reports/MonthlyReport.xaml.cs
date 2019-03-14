@@ -69,11 +69,7 @@ namespace ExpensesTracker.Views.Reports
         {
             await Navigation.PushModalAsync(new NavigationPage(new All_Transactions()));
         }
-        protected override bool OnBackButtonPressed()
-        {
-            Navigation.PopModalAsync();
-            return true;
-        }
+       
 
     }
 }

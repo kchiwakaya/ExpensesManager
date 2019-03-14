@@ -6,7 +6,7 @@
    
         
          
-        <Grid Margin="20,0,20,130">
+        <Grid Margin="20,0,20,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
              <ColumnDefinition Width="*"/>
@@ -36,7 +36,7 @@
         <Label  x:Name="Total_Balance" Grid.Row="3" Grid.Column="1" Margin="10"/>
         <Button Text="Expense +" x:Name="Add_Expense" Clicked="Add_Expense_Clicked" Grid.Row="4" Grid.Column="0"/>
         <Button Text="Income +" x:Name="Add_Income" Clicked="Add_Income_Clicked" Grid.Row="4" Grid.Column="1"/>
-        <Label Text="Rotate for Reports" TextColor="BlueViolet" FontAttributes="Italic" FontFamily="Lobster-Regular"  Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+        <Label Text="Rotate for Reports" TextColor="BlueViolet" FontAttributes="Italic" FontFamily="Lobster-Regular" Grid.Row="5" Grid.ColumnSpan="2"   HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
         
 
     </Grid>

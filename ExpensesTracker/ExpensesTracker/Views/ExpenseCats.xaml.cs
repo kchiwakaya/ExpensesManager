@@ -41,6 +41,7 @@ namespace ExpensesTracker.Views
             {
                 DisplayAlert("Hey", "Please enter a Category", "Ok");
             }
+            Clear();
             
         }
         private void Clear()
