@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.Reports.MonthlyReport" 
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Title="Monthly report" >
+
+
+    
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" x:Name="chartLayout">
+            <forms:ChartView x:Name="MonthlyChart" HeightRequest="250" WidthRequest="400" VerticalOptions="StartAndExpand"/>
+            <StackLayout Orientation="Vertical" >
+                <Button Text="All Transactions" Clicked="btnAll"/>
+                <Button Text="Yearly Report" Clicked="BtnYearly"/>
+                
+            </StackLayout>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.Reports.All_Transactions"
+             Title="All Transactions">
+    <ContentPage.Content>
+        
+           
+            <StackLayout Orientation="Vertical">
+            <StackLayout  Orientation="Horizontal" Margin="20,0,20,0">
+                <Label Text="Start Date" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+                <Label Text="End Date" FontSize="Small" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                <DatePicker x:Name="StartDate" DateSelected="StartDate_DateSelected" HorizontalOptions="FillAndExpand" />
+                <DatePicker x:Name="EndDate"  DateSelected="EndDate_DateSelected" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+                <Label Text="Your Expenses"   HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="Purple" />
+                <Label Text="Your Income"  HorizontalOptions="FillAndExpand" FontSize="Small" TextColor="Purple" />
+            </StackLayout>
+            
+            <Grid Margin="20,0,20,0" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+
+                
+                    <ListView x:Name="_expensesList"
+                      HorizontalOptions="FillAndExpand"
+                      ItemSelected="_expensesList_ItemSelected"
+                       Grid.Row="2" Grid.RowSpan="40" Grid.Column="0"
+                     >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Amount}" TextColor="Red" Detail="{Binding Date,StringFormat=' {0:d MMMM, yyyy}'}" DetailColor="Blue"/>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+                    <ListView x:Name="_incomeList"
+                      HorizontalOptions="FillAndExpand"
+                      ItemSelected="_incomeList_ItemSelected"
+                      Grid.Row="2" Grid.Column="1" Grid.RowSpan="40"
+                      >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell Text="{Binding Amount}" TextColor="Green" Detail="{Binding Date,StringFormat=' {0:d MMMM, yyyy}'}" DetailColor="Blue"/>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                    </ListView>
+
+
+                </Grid>
+
+            </StackLayout>
+            
+        
+       
+    </ContentPage.Content>
+   
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.Home"
+             BackgroundImage="achievement.jpg">
+   
+        
+         
+        <Grid Margin="20,0,20,130">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+             <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Label Grid.Row ="0" Grid.ColumnSpan="2" TextColor="Purple" FontSize="Medium">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Monthly Summary For "/>
+                    <Span x:Name="month"/>
+                </FormattedString>
+
+            </Label.FormattedText>
+        </Label>
+        <Label Text="Expenses" Grid.Row="1" Grid.Column="0" Margin="10"/>
+        <Label x:Name="Ex_Total" Grid.Row="1" Grid.Column="1" Margin="10" TextColor="Red"/>
+        <Label Text="Income" Grid.Row="2" Grid.Column="0" Margin="10"/>
+        <Label x:Name="Inc_Total" Grid.Row="2" Grid.Column="1" Margin="10" TextColor="Green"/>
+        <Label Text="Balance " Grid.Row="3" Grid.Column="0" Margin="10"/>
+        <Label  x:Name="Total_Balance" Grid.Row="3" Grid.Column="1" Margin="10"/>
+        <Button Text="Expense +" x:Name="Add_Expense" Clicked="Add_Expense_Clicked" Grid.Row="4" Grid.Column="0"/>
+        <Button Text="Income +" x:Name="Add_Income" Clicked="Add_Income_Clicked" Grid.Row="4" Grid.Column="1"/>
+        <Label Text="Rotate for Reports" TextColor="BlueViolet" FontAttributes="Italic" FontFamily="Lobster-Regular"  Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+        
+
+    </Grid>
+  
+
+
+</ContentPage>

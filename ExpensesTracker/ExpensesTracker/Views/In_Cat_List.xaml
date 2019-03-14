@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.In_Cat_List"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundImage="achievement.jpg">
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand">
+            <Label Text="Income Categories" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="Medium"
+                   TextColor="Purple"/>
+            <ListView x:Name="_Inc_Cats"
+                      HorizontalOptions="Center" 
+                      SeparatorVisibility="None"
+                      ItemSelected="_Inc_Cats_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" TextColor="Blue" />
+                        
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Button Text="Add New Category"
+                    Clicked="Save_In_Cat_Clicked"
+                    />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

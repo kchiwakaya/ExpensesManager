@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:ExpensesTracker.Views"
+            x:Class="ExpensesTracker.Views.Categories"
+           NavigationPage.HasNavigationBar="False" 
+            BackgroundImage="achievement.jpg">
+  <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <NavigationPage   >
+            <x:Arguments>
+                <views:Ex_Cat_List />
+            </x:Arguments>
+        </NavigationPage>
+        <NavigationPage  >
+            <x:Arguments>
+                <views:In_Cat_List />
+            </x:Arguments>
+        </NavigationPage>
+    </TabbedPage.Children>
+
+
+</TabbedPage>

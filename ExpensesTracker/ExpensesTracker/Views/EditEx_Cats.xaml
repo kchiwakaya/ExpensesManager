@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.EditEx_Cats"
+             BackgroundImage="achievement.jpg">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Done"  x:Name="_Done" Clicked="_Done_Clicked" Icon="outline_done_black_18dp.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Add Category" TextColor="Purple" HorizontalTextAlignment="Center"/>
+            <Entry Placeholder="Category" x:Name="Ex_Cat_Name" Text="{Binding Name}"/>
+            <Button Text="Save" x:Name="BtnSave" Clicked="BtnSave_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

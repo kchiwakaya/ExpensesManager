@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.EditIncome"
+             BackgroundImage="achievement.jpg">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Done"  x:Name="_Done" Clicked="_Done_Clicked" Icon="outline_done_black_18dp.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <StackLayout>
+                <Label Text="Edit Income" TextColor="Purple" FontSize="Medium"    />
+                <Entry Placeholder="Amount" Text="{Binding Amount}" x:Name="In_Amount" />
+                <Picker x:Name="pickerCatsIn" Title="Select Category" ItemDisplayBinding="{Binding Name}" />
+                <Entry Placeholder="Note to self" Text="{Binding Note}" x:Name="In_Note"/>
+                <DatePicker x:Name="In_Date" Date="{Binding Date}" />
+                <Button Text="Save" x:Name="BtnSave" 
+                Clicked="BtnSave_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

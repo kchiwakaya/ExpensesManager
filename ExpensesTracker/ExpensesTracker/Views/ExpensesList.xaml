@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.ExpensesList"
+             BackgroundImage="achievement.jpg">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Text="Add New"  Clicked="AddItem_Clicked" Order="Primary" Icon="outline_add_black_18dp.png">
+            
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+        
+            <Label Text="Monthly Expenses" TextColor="Purple" HorizontalTextAlignment="Center" FontSize="Medium" />
+          
+            <ListView x:Name="_ExpensesList"
+                      HorizontalOptions="Fill"
+                      ItemSelected="_ExpensesList_ItemSelected"
+                   
+                     >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Amount}" TextColor="Green" Detail="{Binding Date,StringFormat=' {0:d MMMM, yyyy}'}" DetailColor="Blue"/>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+            <Label Text="{Binding Total}" x:Name="Tot" TextColor="Red" FontSize="Medium" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

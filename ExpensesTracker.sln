@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpensesTracker.Android", "ExpensesTracker\ExpensesTracker.Android\ExpensesTracker.Android.csproj", "{3462E4F8-269A-4D73-AC3B-284ADE587789}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ExpensesTracker", "ExpensesTracker\ExpensesTracker\ExpensesTracker.shproj", "{E264B8E1-AE4F-4810-938D-9D2E9B82F4BC}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ExpensesTracker\ExpensesTracker\ExpensesTracker.projitems*{3462e4f8-269a-4d73-ac3b-284ade587789}*SharedItemsImports = 4
+		ExpensesTracker\ExpensesTracker\ExpensesTracker.projitems*{e264b8e1-ae4f-4810-938d-9d2e9b82f4bc}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3462E4F8-269A-4D73-AC3B-284ADE587789}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B1CF222-84AE-469B-BFB6-5827D39DC0E1}
+	EndGlobalSection
+EndGlobal

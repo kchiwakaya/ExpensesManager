@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExpensesTracker.Views.ExpenseDetails"
+             BackgroundImage="achievement.jpg">
+    <ContentPage.Content>
+        <StackLayout >
+            <Label Text="Expense Details"/>
+            <Grid>
+                <Label Text="Amount" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Category" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Date" Grid.Row="2" Grid.Column="0"/>
+                <Label Text="Note to Self" Grid.Row="3" Grid.Column="0"/>
+                <Label Text="{Binding Amount}" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="{Binding Category}" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="{Binding Date}" Grid.Row="2" Grid.Column="1"/>
+                <Label Text="{Binding Note}" Grid.Row="3" Grid.Column="1"/>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
